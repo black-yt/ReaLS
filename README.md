@@ -6,7 +6,7 @@
 
 </div>
 
-<img src="./assets/cluster.jpg" width="100%" alt="Representation-Aligned Latent Space" align="center">
+<img src="./assets/cluster.jpg" width="60%" alt="Representation-Aligned Latent Space" align="center">
 
 **Abstract:** Generative models serve as powerful tools for modeling the real world, with mainstream diffusion models, particularly those based on the latent diffusion model paradigm, achieving remarkable progress across various tasks, such as image and video synthesis. Latent diffusion models are typically trained using Variational Autoencoders (VAEs), interacting with VAE latents rather than the real samples. While this generative paradigm speeds up training and inference, the quality of the generated outputs is limited by the latents' quality. Traditional VAE latents are often seen as spatial compression in pixel space and lack explicit semantic representations, which are essential for modeling the real world. In this paper, we introduce ***ReaLS*** (Representation-Aligned Latent Space), which integrates semantic priors to improve generation performance. Extensive experiments show that fundamental DiT and SiT trained on ReaLS can achieve a 15% improvement in FID metric. Furthermore, the enhanced semantic latent space enables more perceptual downstream tasks, such as segmentation and depth estimation.
 
