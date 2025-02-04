@@ -4,9 +4,10 @@
 
 <a href="https://arxiv.org/abs/2502.00359"><img src='https://img.shields.io/badge/arXiv-Paper-red?logo=arxiv&logoColor=white' alt='arXiv'></a>
 
+<img src="./assets/cluster.jpg" width="60%" alt="Representation-Aligned Latent Space" align="center">
+
 </div>
 
-<img src="./assets/cluster.jpg" width="60%" alt="Representation-Aligned Latent Space" align="center">
 
 **Abstract:** Generative models serve as powerful tools for modeling the real world, with mainstream diffusion models, particularly those based on the latent diffusion model paradigm, achieving remarkable progress across various tasks, such as image and video synthesis. Latent diffusion models are typically trained using Variational Autoencoders (VAEs), interacting with VAE latents rather than the real samples. While this generative paradigm speeds up training and inference, the quality of the generated outputs is limited by the latents' quality. Traditional VAE latents are often seen as spatial compression in pixel space and lack explicit semantic representations, which are essential for modeling the real world. In this paper, we introduce ***ReaLS*** (Representation-Aligned Latent Space), which integrates semantic priors to improve generation performance. Extensive experiments show that fundamental DiT and SiT trained on ReaLS can achieve a 15% improvement in FID metric. Furthermore, the enhanced semantic latent space enables more perceptual downstream tasks, such as segmentation and depth estimation.
 
@@ -21,7 +22,7 @@ Visualization results on ImageNet 256×256, from the SiT-XL/2 + ReaLS, with cfg=
 
 We compare the baseline models of DiT and SiT under the same training configuration, with Table below presenting the experimental results without using classifier-free guidance (cfg). The results indicate that under the same model parameters and training steps, diffusion models trained on ReaLS achieve significant performance improvements. Our approach requires no modifications to the diffusion model training process or additional network structures, providing a cost-free enhancement to the diffusion baseline, with an average FID improvement exceeding ***15%***.
 
-| Model | VAE | Params | Steps | FID $\downarrow$ | sFID $\downarrow$ | IS $\uparrow$ | Pre.$\uparrow$ | Rec.$\uparrow$ |
+| Model | VAE | Params | Steps | FID $\downarrow$ | sFID $\downarrow$ | IS $\uparrow$ | Pre. $\uparrow$ | Rec. $\uparrow$ |
 | - | - | - | - | - | - | - | - | - |
 | DiT-B-2            |  SD-VAE                   |  130M    |  400K                       |  43.5                     |       -                    |  -                       |  -                         |  -                         |
 | **DiT-B/2**   |  **Ours**            |  130M    |  **400K**              |  **35.27**           |  **6.30**             |  **37.80**          |  **0.56**             |  **0.62**             | 
@@ -37,7 +38,7 @@ We compare the baseline models of DiT and SiT under the same training configurat
 
 Table below displays the generation results of our model with cfg. In the comparative experiments with DiT-B/2 (80 epochs, cfg=1.5) and SiT-B/2 (200 epochs, cfg=1.5), the models trained on ReaLS consistently outperformed traditional VAE space, achieving better FID scores. In the SiT-XL/2 experiment, our model reached an impressive FID of ***1.82*** after a relatively low number of training epochs (i.e., 400 epochs).
 
-| Model | Epochs | FID $\downarrow$ | sFID $\downarrow$ | IS $\uparrow$ | Pre.$\uparrow$ | Rec.$\uparrow$ |
+| Model | Epochs | FID $\downarrow$ | sFID $\downarrow$ | IS $\uparrow$ | Pre. $\uparrow$ | Rec. $\uparrow$ |
 | - | - | - | - | - | - | - |
 | DiT-B/2 (cfg=1.5) | 80 | 22.21 | - | -  | - | - |
 | DiT-B/2 + ReaLS (cfg=1.5) | 80 | ***19.44*** |5.45 | 70.37 | 0.68 | 0.55 |
