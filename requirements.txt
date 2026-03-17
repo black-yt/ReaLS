@@ -1,0 +1,14 @@
+torch>=2.0
+torchvision
+diffusers>=0.25.0
+lightning>=2.0
+timm>=0.9.0
+einops
+lpips
+torchdiffeq
+tqdm
+numpy
+Pillow
+scipy
+tensorflow>=2.0
+requests

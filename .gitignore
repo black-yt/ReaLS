@@ -10,9 +10,7 @@ __pycache__/
 .Python
 .vscode/
 */__pycache__
-*.txt
 *.csv
-*.sh
 *.zip
 *.ckpt
 *.pth
